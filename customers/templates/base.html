@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Base django template</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '../../static/css/style.css' %}">
+    <link rel="stylesheet" href="{% static '../../static/css/bootstrap/css/bootstrap.min.css' %}">
+</head>
+<body>
+<div class="navigation-section">
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">EMOBILIS</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mynavbar">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="% url 'index' %">INDEX</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="% url 'about_us' %">ABOUT US</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="% url 'contact' %">CONTACT </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="% url 'gallery' %">Gallery</a>
+        </li>
+           <li class="nav-item">
+          <a class="nav-link" href="% url 'me' %">me</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="text" placeholder="Search">
+        <button class="btn btn-primary" type="button">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+</div>
+
+{% block title %}
+
+{% endblock %}
+
+{% block content %}
+
+{% endblock %}
+
+<section class="footer-section">
+    <h4>THIS IS MY FOOTER</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab architecto consequuntur delectus dignissimos ducimus eius eum ex laborum maxime molestiae neque numquam odio possimus quo, ratione reprehenderit rerum tempora vero.</p>
+</section>
+<script src="bootstrap/js/bootstrap.js"></script>
+</body>
+</html>
